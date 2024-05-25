@@ -1,0 +1,225 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: font;
+  src: url(font/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+  --accent: #4c53f1;
+  --primary: #ffecd8;
+  --secodary: #969696;
+
+  --header: #303031;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  font-family: font;
+  background: var(--primary);
+}
+
+/* Container Wrapper  */
+.container__wrapper {
+  width: 600px;
+  height: auto;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 0.1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Container Header  */
+.container__header {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 0 1rem 0;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Header  */
+.header {
+  font-size: 3.5rem;
+  letter-spacing: -4px;
+  font-weight: bold;
+  color: var(--header);
+  cursor: pointer;
+}
+
+/* Header Stats  */
+.header__stats {
+  width: 150px;
+  height: 3.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2.5rem;
+}
+
+.header__stats .stats {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.7rem;
+  color: var(--header);
+  letter-spacing: -3px;
+}
+
+.header__stats .stats span {
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: -1px;
+}
+
+/* Stats Icon  */
+.stats__icon {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stats__icon svg {
+  width: 2rem;
+  fill: var(--accent);
+}
+
+/* Task Add Container  */
+.task__add__container {
+  width: 100%;
+  height: 3.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 3.5rem;
+  gap: 1rem;
+}
+
+/* Task  */
+.task {
+  border: 2px solid #eaeaea;
+  outline: none;
+  padding: 0 0.3rem 0 2rem;
+  background: #fbfbfb;
+  font-size: 1.5rem;
+  color: var(--header);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.task:hover {
+  border: 2px solid var(--header);
+}
+.task:focus {
+  border: 2px solid var(--accent);
+}
+
+.task::placeholder {
+  color: #8f8f8f;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+/* Add Task  */
+.add__task {
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.add__task svg {
+  width: 1.5rem;
+  fill: #ffffff;
+  transition: all 0.1s ease-in-out;
+}
+
+.add__task:hover {
+  background: var(--header);
+}
+.add__task:hover svg {
+  fill: var(--accent);
+}
+
+/* Task Container  */
+.task__container {
+  width: 100%;
+  height: auto;
+}
+
+/* Task Grid  */
+.task__grid {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Task Item  */
+.task__item {
+  width: 100%;
+  height: 3%;
+
+  display: grid;
+
+  grid-template-columns: 2rem 1fr;
+  gap: 0.5rem;
+}
+
+/* Checkbox  */
+.checkbox {
+  width: 100%;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* Task Details  */
+.task__details {
+  width: 100%;
+  height: auto;
+
+  color: var(--header);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.3rem 0 0 0;
+}
+
+/* OPen Task  */
+.open__task {
+  padding: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
+  border-bottom: 2px solid var(--primary);
+}
+
+
+/* Close Task  */
+
+.close__task .task__details {
+	color: var(--secodary);
+	text-decoration: line-through;
+}
+
