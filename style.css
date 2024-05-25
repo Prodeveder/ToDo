@@ -194,7 +194,35 @@ body {
 .checkbox {
   width: 100%;
   height: 2rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   cursor: pointer;
+  border: 2px solid var(--accent);
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox:checked {
+  background-color: #e7e3e3; 
+  border-color: var(--secodary);
+}
+
+.checkbox:checked::before {
+  content: "";
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  width: 4px;
+  height: 10px;
+  border: solid var(--secodary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /* Task Details  */
@@ -215,11 +243,9 @@ body {
   border-bottom: 2px solid var(--primary);
 }
 
-
 /* Close Task  */
 
 .close__task .task__details {
-	color: var(--secodary);
-	text-decoration: line-through;
+  color: var(--secodary);
+  text-decoration: line-through;
 }
-
